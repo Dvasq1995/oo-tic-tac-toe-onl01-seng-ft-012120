@@ -104,7 +104,7 @@ class TicTacToe
       false
     end
   end
-  
+
   def winner
     if !won?
       nil
@@ -113,14 +113,12 @@ class TicTacToe
     end
   end
   
-  def play
-    until over? do
-      turn
-      if won?
-        "Congratulations #{winner}"
-      elsif draw?
-        "Cat's Game!"
-      end
-    end
-  end
+ def play
+   turn until over?
+   if won?
+     puts "Congratulations #{winner}"
+   elsif draw?
+     puts "Cat's game!"  
+   end
+ end
 end
